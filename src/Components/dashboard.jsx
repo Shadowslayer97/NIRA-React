@@ -3,6 +3,7 @@ import axios from 'axios';
 import {Grid, Row, Col} from "react-bootstrap";
 
 import LineChart from './charts/line_chart/LineChart';
+import Navigation from './Navigation';
 import PieChart from "./charts/pie_chart/PieChart";
 import Searchbar from "./Searchbar";
 import SampleStore from '../stores/SamplesStore';
@@ -47,7 +48,14 @@ class Dashboard extends Component {
     });
   }
 
+<<<<<<< HEAD
 
+=======
+  logOut() {
+    this.state = auth.doSignOut();
+    //TODO component not updating, fix.
+  }
+>>>>>>> upstream/master
 
   render() {
     const img = this.state.samples.map(sample => {
@@ -109,4 +117,8 @@ class Dashboard extends Component {
   }
 }
 
+<<<<<<< HEAD
 export default Dashboard;
+=======
+export default withRouter (Dashboard);
+>>>>>>> upstream/master
